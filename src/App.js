@@ -24,7 +24,9 @@ export default function App() {
         <TextInput name="email" validations={[present, email]} />
         <Select name="sex" options={sexOptions} />
         <Radio name="gender" options={sexOptions} />
-        <button onClick={() => console.log("user: ", user)}>SUBMIT</button>
+        <button className="submit" onClick={() => console.log("user: ", user)}>
+          SUBMIT
+        </button>
       </Form>
     </div>
   );

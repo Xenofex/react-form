@@ -3,10 +3,15 @@
   text-align: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .form {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 
 .form-control {
@@ -18,15 +23,26 @@
   width: 30%;
   text-align: right;
   padding: 0.3em;
-  box-sizing: border-box;
 }
 
-.form-input {
+.has-error .form-label {
+  color: red;
+}
+
+.has-error .form-input {
+  border: red 1px solid;
+}
+
+.form-input-box {
   width: 70%;
 }
 
-.form-control {
-  /* width: 70%; */
+.form-input {
+  width: 100%;
+}
+
+.form-error {
+  color: red;
 }
 
 .form-input-group {
@@ -35,4 +51,8 @@
 
 .form-radio-option {
   display: inline;
+}
+
+.submit {
+  margin-left: 30%;
 }

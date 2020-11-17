@@ -30,13 +30,17 @@ function Input({ defaultValue, name, title = name, validations, children }) {
     }
   };
 
+  const hasError = changed && error;
+
   return (
-    <div className="form-control">
+    <div className={`form-control ${hasError && "has-error"}`}>
       <label className="form-label" htmlFor={"input-" + title}>
         {title}
       </label>
-      {children({ value, onChange })}
-      {changed && error && <div className="form-error">{error}</div>}
+      <div className="form-input-box">
+        {children({ value, onChange })}
+        {hasError && <div className="form-error">{error}</div>}
+      </div>
     </div>
   );
 }

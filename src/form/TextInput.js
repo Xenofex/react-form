@@ -1,11 +1,16 @@
 import React from "react";
 import { Input } from "./Input";
 
-function TextInput({ value: defaultValue, title, name, validations }) {
+function TextInput({ value: defaultValue, name, title = name, validations }) {
   return (
     <Input {...{ defaultValue, title, name, validations }}>
       {({ value, onChange }) => (
-        <input value={value || ""} onChange={onChange} />
+        <input
+          className="form-input"
+          id={"input-" + title}
+          value={value || ""}
+          onChange={onChange}
+        />
       )}
     </Input>
   );

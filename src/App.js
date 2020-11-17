@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-import { Form, TextInput, Select, Validations } from "./form";
+import { Form, TextInput, Select, Radio, Validations } from "./form";
 
 export default function App() {
   const defaultUser = {
@@ -23,6 +23,7 @@ export default function App() {
         <TextInput name="name" validations={[present]} />
         <TextInput name="email" validations={[present, email]} />
         <Select name="sex" options={sexOptions} />
+        <Radio name="gender" options={sexOptions} />
         <button onClick={() => console.log("user: ", user)}>SUBMIT</button>
       </Form>
     </div>

@@ -12,7 +12,7 @@ function Select({
   return (
     <Input {...{ defaultValue, title, name, validations }}>
       {({ value, onChange }) => (
-        <select value={value} onChange={onChange}>
+        <select className="form-input" value={value} onChange={onChange}>
           {options.map(({ name, value: val }) => (
             <option key={val} val={val}>
               {name}

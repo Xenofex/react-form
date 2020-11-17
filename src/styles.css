@@ -2,3 +2,37 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.form {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-control {
+  display: flex;
+  margin: 0.3em;
+}
+
+.form-label {
+  width: 30%;
+  text-align: right;
+  padding: 0.3em;
+  box-sizing: border-box;
+}
+
+.form-input {
+  width: 70%;
+}
+
+.form-control {
+  /* width: 70%; */
+}
+
+.form-input-group {
+  display: inline-block;
+}
+
+.form-radio-option {
+  display: inline;
+}
